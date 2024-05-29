@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="menu.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+    <div w3-include-html="menu.html"></div>
+    <script>w3.includeHTML();</script> 
+
+    <div>
+        <input type="text" id="surnameInput" placeholder="Surname" onkeyup="updateSurname()">
+        <input type="text" id="nameInput" placeholder="Name" onkeyup="updateName()">
+        <select id="relationTypeInput" onchange="updateRelationType()">
+            <option value="S/o">S/o</option>
+            <option value="S/o">S/o</option>
+            <option value="D/o">D/o</option>
+        </select>
+        <input type="text" id="relationNameInput" placeholder="Relation Name" onkeyup="updateRelationName()">
+        <input type="text" id="H_NOInput" placeholder="H_NO" onkeyup="updateH_NO()">
+        <input type="text" id="AddressInput" placeholder="Address" onkeyup="updateAddress()">
+        <input type="text" id="Date_Of_BirthInput" placeholder="Date Of Birth" onkeyup="updateDateOfBirth()">
+        <input type="text" id="subCasteInput" placeholder="subCaste" onkeyup="updateSubCaste()">
+        <input type="text" id="casteInput" placeholder="Caste" onkeyup="updateCaste()">
+        <select id="relationInput" onchange="updateRelation()">
+            <option value="father’s">father’s</option>
+            <option value="fathers’s">father’s</option>
+            <option value="wife’s">wife’s</option>
+        </select>
+        <input type="text" id="annualIncomeInput" placeholder="annualIncome" onkeyup="updateannualIncome()">
+        <input type="text" id="occupationInput" placeholder="occupation" onkeyup="updateOccupation()">
+        <input type="text" id="DD_MM_YYInput" placeholder="DD_MM_YY" onkeyup="updateDD_MM_YY()">
+    </div>
+
+    <h3>
+        <style>
+            @media print {
+                input[type="text"], select {
+                    display: none;
+                }
+                div.printable {
+                    display: block;
+                }
+            }
+            h1 {text-align: center;}
+            p {text-align: left;}
+            div {text-align: right;}
+        </style>
+        <h1><b>A F F I D A V I T </b></h1>
+        I, <b><span id="surname">---</span> <span id="Name">---</span>, <span id="relationType">---</span> <span id="relationName">---</span> R/o <span id="H_NO">---</span>, <span id="Address">---</span></b>, Nalgonda (Town & District) Telangana State, do hereby solemnly affirm and sincerely state on oath as follows:<br>
+        1) I am deponent here. I have born on <b><span id="Date_Of_Birth">---</span></b>. <b>I and my family</b> belong to <b><span id="subCaste">---</span> <span id="Caste">---</span></b>. My <span id="relation">---</span> occupation: <span id="occupation">---</span>. My family annual income is <span id="annualIncome">---</span>.<br>
+        2) I am deponent here. I and my family belong to Economically Weaker Sections, since the gross annual income of my family is below Rs. 8 Lakh (Rupees Eight Lakhs Only) as per the Director, Ministry of Personnel, Public Grievances and Pensions, Department of Personnel and Training, New Delhi, Government of India Memo No.36039/1/2019-Estt (Res) even dated 21-01-2019 and 31-04-2019. <br>
+        My family does not own or possess any of the following assets......<br>
+        i. 5.00 acres of agricultural land and above, <br>
+        ii. Residential flat of 1000 sq. ft and above, <br>
+        iii. Residential plot of 100 sq. yards and above in notified municipalities, <br>
+        iv. Residential plot of 200 sq. yards and above in areas other than the notified municipalities. <br><br>
+
+        The <b>Hon’ble Tahsildar, Nalgonda</b> has got ample powers to issue the <b>Economically Weaker Sections (E.W.S)</b> certificate in favor of me and record the same. 
+        Hence, I pray the Hon’ble authorities have got ample powers to issue the <b>Economically Weaker Sections (E.W.S)</b> certificate in favor of me and record the same.
+        The above facts are true and correct to the best of my knowledge and belief.<br><br>
+
+        <b><div>Deponent</div></b>
+        <p>Place: Nalgonda,</p>
+        <p>Date: <span id="DD_MM_YY">---</span></p>
+        <div><b>(<span id="surnameSpan2">---</span> <span id="nameSpan2">---</span>)</b></div>
+        Sworn and signed before me at Nalgonda On <span id="DD_MM_YYSpan2">---</span>.
+    </h3>
+
+    <script>
+        function updateSurname() {
+            var surnameValue = document.getElementById("surnameInput").value;
+            document.getElementById("surname").innerText = surnameValue;
+            document.getElementById("surnameSpan2").innerText = surnameValue;
+        }
+
+        function updateName() {
+            var nameValue = document.getElementById("nameInput").value;
+            document.getElementById("Name").innerText = nameValue;
+            document.getElementById("nameSpan2").innerText = nameValue;
+        }
+
+        function updateRelationType() {
+            var relationTypeValue = document.getElementById("relationTypeInput").value;
+            document.getElementById("relationType").innerText = relationTypeValue;
+        }
+
+        function updateRelationName() {
+            var relationNameValue = document.getElementById("relationNameInput").value;
+            document.getElementById("relationName").innerText = relationNameValue;
+        }
+
+        function updateH_NO() {
+            var H_NOvalue = document.getElementById("H_NOInput").value;
+            document.getElementById("H_NO").innerText = H_NOvalue;
+        }
+
+        function updateAddress() {
+            var addressValue = document.getElementById("AddressInput").value;
+            document.getElementById("Address").innerText = addressValue;
+        }
+
+        function updateDateOfBirth() {
+            var dateOfBirthValue = document.getElementById("Date_Of_BirthInput").value;
+            document.getElementById("Date_Of_Birth").innerText = dateOfBirthValue;
+        }
+
+        function updateRelation() {
+            var relationValue = document.getElementById("relationInput").value;
+            document.getElementById("relation").innerText = relationValue;
+        }
+
+        function updateSubCaste() {
+            var subCasteValue = document.getElementById("subCasteInput").value;
+            document.getElementById("subCaste").innerText = subCasteValue;
+        }
+
+        function updateCaste() {
+            var casteValue = document.getElementById("casteInput").value;
+            document.getElementById("Caste").innerText = casteValue;
+        }
+        
+        function updateannualIncome() {
+            var annualIncomeValue = document.getElementById("annualIncomeInput").value;
+            document.getElementById("annualIncome").innerText = annualIncomeValue;
+        }
+
+        function updateOccupation() {
+            var occupationValue = document.getElementById("occupationInput").value;
+            document.getElementById("occupation").innerText = occupationValue;
+        }
+
+        function updateDD_MM_YY() {
+            var DD_MM_YYvalue = document.getElementById("DD_MM_YYInput").value;
+            document.getElementById("DD_MM_YY").innerText = DD_MM_YYvalue;
+            document.getElementById("DD_MM_YYSpan2").innerText = DD_MM_YYvalue;
+        }
+    </script>
+</body>
+</html>
